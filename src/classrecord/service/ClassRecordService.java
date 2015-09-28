@@ -13,9 +13,12 @@ import classrecord.model.Student;
 
 /**
  * Service used to handle class record transactions
- * @author:Julie Jane Alegre
- * @version 1.0
+ * @author Julie Jane Alegre
+ * @version 0.01
+ * Version History
+ * 0.01 - Julie Jane Alegre - initial codes
  */
+
 public class ClassRecordService {
     /**
      * Creates an instance of Class record service

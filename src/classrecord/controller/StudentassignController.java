@@ -20,9 +20,12 @@ import com.google.appengine.api.datastore.KeyFactory;
 
 /**
  * Controller used to assign a student to an array
- * @author Julie Jane Alegre
- * @version 1
+ * @author Albert Dale Palacio
+ * @version 0.01
+ * Version History
+ * 0.01 - Albert Dale Palacio - initial codes
  */
+
 public class StudentassignController extends Controller {
 
     @Override

@@ -12,9 +12,12 @@ import classrecord.model.Student;
 
 /**
  * Dao used to access datastore for Student transactions
- * @author
- * @version
+ * @author J-Dar Siegfred Rodriguez
+ * @version 0.01
+ * Version History
+ * 0.01 - J-Dar Siegfred Rodriguez -  initial codes
  */
+
 public class StudentDao extends DaoBase<Student>{
     
     public ModelQuery<Student> query() {

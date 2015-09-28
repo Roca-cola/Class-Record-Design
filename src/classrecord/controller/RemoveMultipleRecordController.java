@@ -11,9 +11,12 @@ import classrecord.service.RecordService;
 
 /**
  * Controller used to remove multiple records
- * @author
- * @version
+ * @author Miqueas Cagot
+ * @version 0.01
+ * Version History
+ * 0.01 - Miqueas Cagot - initial codes
  */
+
 public class RemoveMultipleRecordController extends Controller {
 
     @Override

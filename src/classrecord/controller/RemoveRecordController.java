@@ -11,9 +11,12 @@ import classrecord.service.StudentService;
 
 /**
  * Controller used to remove a class record
- * @author
- * @version
+ * @author Bryan Agustine Cabansay
+ * @version 0.01
+ * Version History
+ * 0.01 - Bryan Agustine Cabansay - initial codes
  */
+
 public class RemoveRecordController extends Controller {
 
     @Override

@@ -12,9 +12,12 @@ import classrecord.service.ClassService;
 
 /**
  * Controller used to update a class
- * @author
- * @version
+ * @author Miqueas Cagot
+ * @version 0.01
+ * Version History
+ * 0.01 - Miqueas Cagot - initial codes
  */
+
 public class UpdateClassController extends Controller {
 
     @Override

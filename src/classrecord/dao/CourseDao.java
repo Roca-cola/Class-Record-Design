@@ -7,8 +7,10 @@ import classrecord.model.Course;
 
 /**
  * Dao used to access datastore for course transactions
- * @author
- * @version
+ * @author Albert Dale Palacio
+ * @version 0.01
+ * Version History
+ * 0.01 - Albert Dale Palacio -  initial codes
  */
 
 public class CourseDao extends DaoBase<Course>{

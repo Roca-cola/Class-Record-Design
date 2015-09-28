@@ -13,8 +13,10 @@ import classrecord.model.Student;
 
 /**
  * Dao used to handle ClassRecord transactions
- * @author Julie Jane Alegre 
- * @version 1.0
+ * @author J-Dar Siegfred Rodriguez
+ * @version 0.01
+ * Version History
+ * 0.01 - initial codes
  */
 
 public class ClassRecordDao extends DaoBase<ClassRecord>{

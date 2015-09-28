@@ -16,9 +16,12 @@ import classrecord.utility.Validator;
 
 /**
  * Controller used to update student record
- * @author
- * @version
+ * @author Julie Jane Alegre
+ * @version 0.01
+ * Version History
+ * 0.01 - Julie Jane Alegre - initial codes
  */
+
 public class UpdateStudentController extends Controller {
 
     @Override

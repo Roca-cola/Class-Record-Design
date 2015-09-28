@@ -17,9 +17,13 @@ import classrecord.model.ClassRecord;
 
 /**
  * Service used to handle class record transactions
- * @author
- * @version
+ * @author Bryan Agustine Cabansay
+ * @version 0.02
+ * Version History
+ * 0.01 - Bryan Agustine Cabansay - initial codes
+ * 0.02 - Bryan Agustine Cabansay - added additional quizzes, exams and assignments
  */
+
 public class RecordService {
     
     /**

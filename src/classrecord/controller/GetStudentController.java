@@ -14,8 +14,10 @@ import com.google.appengine.labs.repackaged.org.json.JSONObject;
 
 /**
  * Controller used to get student details
- * @author
- * @version
+ * @author Sheila Mae Batistil
+ * @version 0.01
+ * Version History
+ * 0.01 - Sheila Mae Batistil - initial codes
  */
 
 public class GetStudentController extends Controller {

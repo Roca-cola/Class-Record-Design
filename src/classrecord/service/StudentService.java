@@ -18,9 +18,13 @@ import classrecord.model.Student;
 
 /**
  * Service used to handle student transactions
- * @author
- * @version
+ * @author Bryan Agustine Cabansay
+ * @version 0.02
+ * Version History
+ * 0.01 - Bryan Agustine Cabansay - initial codes
+ * 0.02 - Bryan Agustine Cabansay - added search student method
  */
+
 public class StudentService {
     /**
      * Student DAO

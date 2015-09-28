@@ -12,6 +12,14 @@ import classrecord.constants.Constants;
 import classrecord.dto.StudentDTO;
 import classrecord.service.StudentService;
 
+/**
+ * Controller used to access student transactions
+ * @author J-Dar Siegfred Rodriguez
+ * @version 0.01
+ * Version History
+ * 0.01 - J-Dar Siegfred Rodriguez - initial codes
+ */
+
 public class StudentController extends Controller {
 
     @Override

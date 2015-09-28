@@ -12,6 +12,13 @@ import classrecord.service.ClassRecordService;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.labs.repackaged.org.json.JSONObject;
 
+/**
+ * Controller used to get student keys from class
+ * @author Bryan Agustine Cabansay
+ * @version 0.01
+ * Version History
+ * 0.01 - Bryan Agustine Cabansay - initial codes
+ */
 public class GetStudentKeysFromClassController extends Controller {
 
     @Override

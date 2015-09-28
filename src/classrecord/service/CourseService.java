@@ -14,9 +14,12 @@ import classrecord.model.Course;
 
 /**
  * Service used to handle course transactions
- * @author
- * @version
+ * @author Sheila Mae Batistil
+ * @version 0.01
+ * Version History
+ * 0.01 - Sheila Mae Batistil - initial codes
  */
+
 public class CourseService {
     
     /**

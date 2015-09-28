@@ -18,8 +18,11 @@ import com.google.appengine.labs.repackaged.org.json.JSONObject;
 
 /**
  * Controller used to get student records of a class
- * @author
- * @version
+ * @author J-Dar Siegfred Rodriguez
+ * @version 0.02
+ * Version History
+ * 0.01 - J-Dar Siegfred Rodriguez - initial codes
+ * 0.02 - J-Dar Siegfred Rodriguez - added additional quizzes, exams, and assignments
  */
 public class GetStudentPerClassController extends Controller {
 

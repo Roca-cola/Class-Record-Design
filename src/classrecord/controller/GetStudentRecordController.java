@@ -19,10 +19,13 @@ import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.labs.repackaged.org.json.JSONObject;
 
 /**
- * Controller used to get student record
- * @author
- * @version
+ * Controller used to get student records
+ * @author Albert Dale Palacio
+ * @version 0.01
+ * Version History
+ * 0.01 - Albert Dale Palacio - initial codes
  */
+
 public class GetStudentRecordController extends Controller {
 
     @Override

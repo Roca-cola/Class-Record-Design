@@ -14,6 +14,14 @@ import classrecord.dto.RecordsDTO;
 import classrecord.dto.StudentDTO;
 import classrecord.service.RecordService;
 
+/**
+ * Controller used to manage Class Record 
+ * @author Sheila Mae Batistil
+ * @version 0.01
+ * Version History
+ * 0.01 - Sheila Mae Batistil - initial codes
+ */
+
 public class RecordController extends Controller {
 
     @Override

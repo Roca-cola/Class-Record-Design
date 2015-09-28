@@ -9,6 +9,14 @@ import classrecord.service.RecordService;
 
 import com.google.appengine.labs.repackaged.org.json.JSONObject;
 
+/**
+ * Controller used to get all class records
+ * @author Julie Jane Alegre
+ * @version 0.01
+ * Version History
+ * 0.01 - Julie Jane Alegre - initial codes
+ */
+
 public class GetRecordsController extends Controller {
 
     @Override

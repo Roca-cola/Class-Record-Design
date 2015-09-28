@@ -12,9 +12,12 @@ import classrecord.service.RecordService;
 
 /**
  * Controller used to update a student record
- * @author
- * @version
+ * @author Sheila Mae Batistil
+ * @version 0.01
+ * Version History
+ * 0.01 - Sheila Mae Batisil - initial codes
  */
+
 public class UpdateStudentRecordController extends Controller {
 
     @Override

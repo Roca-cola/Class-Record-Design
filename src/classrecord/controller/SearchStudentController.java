@@ -9,6 +9,14 @@ import classrecord.service.StudentService;
 
 import com.google.appengine.labs.repackaged.org.json.JSONObject;
 
+/**
+ * Controller used to search a student
+ * @author Bryan Agustine Cabansay
+ * @version 0.01
+ * Version History
+ * 0.01 - Bryan Agustine Cabansay - initial codes
+ */
+
 public class SearchStudentController extends Controller {
 
     @Override

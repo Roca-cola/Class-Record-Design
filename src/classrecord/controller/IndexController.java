@@ -5,8 +5,10 @@ import org.slim3.controller.Navigation;
 
 /**
  * Initial Controller
- * @author 
- * @version
+ * @author Julie Jane Alegre
+ * @version 0.01
+ * Version History
+ * 0.01 - Julie Jane Alegre - initial codes
  */
 
 public class IndexController extends Controller {
