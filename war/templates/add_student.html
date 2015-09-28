@@ -1,0 +1,69 @@
+					<form ng-submit="addStudent()" class="form-horizontal push-5-t">
+							<div class="form-group">
+                                <div class="col-xs-4 text-center">
+                                    <p class="p-success">{{successMessage}}</p>
+                                    <p class="error">{{errorMessage}}</p>
+                                </div>                                            
+                            </div>
+                            <div class="form-group">
+                                <div class="col-xs-4">
+                                    <label for="register4-firstname">First Name</label>
+                                    <input class="form-control validatable" type="text" required ng-model="firstName" id="firstName" placeholder="First Name..">
+                                    <div class="error" hidden="true">Invalid first name.</div>
+                                </div>                                            
+                            </div>    
+                            <div class="form-group">
+                                <div class="col-xs-4">
+                                    <label for="register4-lastname">Last Name</label>
+                                    <input class="form-control validatable" type="text" required ng-model="lastName" id="lastName" placeholder="Last Name..">
+                                    <div class="error" hidden="true">Invalid last name.</div>
+                                </div>
+                            </div> 
+                            <div class="form-group">
+                                <div class="col-xs-4">
+                                	<div class="form-material">
+	                                    <label for="register4-course">Course</label>
+	                                    <select class="form-control" id="register4-course" ng-model="courseSelected" ng-required>
+	                                    	<option disabled>Please select a course</option>
+	                                    	<option ng-repeat="course in courses" value="{{course.name}}">{{course.name}}</option>
+	                                    </select>
+	                                    <div class="error" hidden="true">Invalid course.</div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="form-group">
+                                <div class="col-xs-4">
+                                    <div class="form-material">
+                                    	<input required class="js-datepicker form-control" type="text" id="example-datepicker4" ng-model="birthDate" name="example-datepicker4" data-date-format="yyyy/mm/dd" placeholder="yyyy/mm/dd">
+										<label for="example-datepicker4">Choose a date</label>                
+                                    </div>
+                                    <div class="error" hidden="true">Invalid birth date.</div>
+                                </div>
+                            </div>                                                                                                                                     
+                            <div class="form-group">
+                                <div class="col-xs-12">
+                                    <button class="btn btn-sm btn-success" type="submit"><i class="fa fa-plus push-5-r"></i> Add Student</button>
+                                    <div class="successIndicator" hidden="true">Student Registration Successful.</div>
+                                </div>
+                            </div>
+                    <br/>
+                    </form>
+          
+        <!--   
+        <form ng-submit="addCourse()">
+        	<div class="form-group">
+                <div class="col-xs-4">
+                   <label for="register4-firstname">Add Course</label>
+                    <input class="form-control validatable" type="text" required ng-model="newCourse" placeholder="Add COurse">
+                    <button class="submit">Submit</button>
+                </div>                                            
+            </div>    
+                 
+        </form>
+         -->            
+        <script>
+            $(function () {
+                // Init page helpers (BS Datepicker + BS Colorpicker + Select2 + Masked Input + Tags Inputs plugins)
+                App.initHelpers(['datepicker', 'colorpicker', 'select2', 'masked-inputs', 'tags-inputs']);
+            });
+        </script> 

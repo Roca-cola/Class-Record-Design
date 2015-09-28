@@ -1,0 +1,51 @@
+        
+        <script src="/assets/js/core/jquery.min.js"></script>
+        <script src="/assets/js/core/bootstrap.min.js"></script>
+        <script src="/assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="/assets/js/core/jquery.appear.min.js"></script>
+        <script src="/assets/js/core/jquery.countTo.min.js"></script>
+        <script src="/assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="/assets/js/core/js.cookie.min.js"></script>        
+        <script src="/assets/js/app.js"></script>
+        <script src="/assets/js/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+        <script src="/assets/js/plugins/select2/select2.full.min.js"></script>
+        <script src="/assets/js/plugins/masked-inputs/jquery.maskedinput.min.js"></script>
+        <script src="/assets/js/plugins/dropzonejs/dropzone.min.js"></script>
+        <script src="/assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js"></script>
+        <script src="/assets/js/plugins/slick/slick.min.js"></script>
+        <script src="/assets/js/plugins/chartjs/Chart.min.js"></script>
+        <script src="/assets/js/pages/base_comp_animations.js"></script>
+        <script src="/assets/js/core/angular.js"></script> 
+        <script src="/assets/js/core/angular-route.min.js"></script>  
+        <script src="/assets/js/core/class_record.js"></script>   
+        <script>
+	        $( document ).ready(function() {
+	        	$(document).on('click', '#add-student-page', function(){		
+	        		$("#record-nav").addClass("open");
+		        	$("#edit-student-page").removeClass("active");
+		        	$("#class-record-page").removeClass("active");
+		        	$("#add-student-page").addClass("active");
+		        	$("#student-nav").addClass("open");
+		        	$("#record-nav").removeClass("open");
+	        	});
+	        	$(document).on('click', '#edit-student-page', function(){		
+	        		$("#record-nav").addClass("open");
+		        	$("#add-student-page").removeClass("active");
+		        	$("#class-record-page").removeClass("active");
+		        	$("#edit-student-page").addClass("active");
+		        	$("#student-nav").addClass("open");
+		        	$("#record-nav").removeClass("open");
+	        	});
+	        	$(document).on('click', '#class-record-page', function(){		
+	        		$("#record-nav").addClass("open");
+		        	$("#add-student-page").removeClass("active");
+		        	$("#edit-student-page").removeClass("active");
+		        	$("#class-record-page").addClass("active");
+		        	$("#record-nav").addClass("open");
+		        	$("#student-nav").removeClass("open");
+	        	});
+	        });
+        </script>
+           
+        

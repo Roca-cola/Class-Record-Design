@@ -1,0 +1,203 @@
+				<div class="content bg-white border-b">
+                	<!-- Enter the Class Code Here  -->
+                    <h2></h2>
+                    <br/>   
+                    <!-- Start Class Record View -->                 
+                    <div>
+	                    <select ng-change="changeClass()" ng-model="classSelected">
+	                    	<option id="select-class" disabled value="placeholder">&nbsp;Select Class</option>
+	                    	<option ng-repeat="obj in classes" value="{{obj.key}}">&nbsp; {{obj.name}}</option>
+	                    </select>
+	                    <button class="btn btn-sm btn-success" onclick="addClassesToModal()" data-toggle="modal" data-target="#addClass">
+	                    <i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;<b>Add New Class</b></button>
+	                    <button class="btn btn-sm btn-success pull-right" data-toggle="modal" data-target="#add-students-to-class">
+	                    <i class="fa fa-plus"></i>&nbsp;&nbsp;&nbsp;<b>Add Students</b></button>	                    
+                      	<div class="form-material form-material-primary input-group col-lg-2">
+	                          <input class="form-control" type="text" placeholder="Search Name.." ng-model="searchRecordName" ng-change="searchRecord()">
+	                          <span class="input-group-addon"><i class="si si-magnifier"></i></span>
+	                 	</div>
+	                    <div id="addClass" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">	                    
+		                    <div class="modal-dialog modal-dialog-popin">
+				                <div class="modal-content">
+				                    <div class="block block-themed block-transparent remove-margin-b">
+				                        <div class="block-header bg-primary-dark">
+				                            <ul class="block-options">
+				                                <li>
+				                                    <button data-dismiss="modal" type="button" ng-click="getClassesList()"><i class="si si-close"></i></button>
+				                                </li>
+				                            </ul>
+				                            <h3 class="block-title">Add Class</h3>
+				                        </div>
+				                        <div class="block-content">
+				                        	<p>
+				                            <form ng-submit="addClass()">
+		                    					<input id="class_name" ng-model="newClassName" required type="text" placeholder=" Add Class Here"/>
+		                    					<input type="submit" class="btn btn-xs btn-success" value="Add Class"/>
+	                    					</form>
+	                    					</br>
+	                    					<table class="table table-striped" id="manage-class-table">
+	                    						<thead>
+		                    						<tr>
+		                    							<th>Class Name</th>
+		                    							<th class="text-center">Actions</th>
+		                    						</tr>
+	                    						</thead>
+	                    						<tbody>		 
+	                    							<tr ng-repeat="obj in classes">
+		                    							<td><input type="text" size="40" id="{{obj.key}}" value="{{obj.name}}" /></td>
+		                    							<td class="text-center">
+		                    								<button class="btn btn-xs btn-default" ng-click="updateClass(obj.key)" data-toggle="tooltip" title="Update Class"><i class="fa fa-pencil"></i></button>
+					        								<button class="btn btn-xs btn-default" ng-click="deleteClass(obj.key)" data-toggle="tooltip" title="Remove Class"><i class="fa fa-times"></i></button>
+				        								</td>
+		                    						</tr>               					
+	                    						</tbody>
+	                    					</table>
+	                    					</p>
+				                        </div>
+				                    </div>
+				                    <div class="modal-footer">
+				                        <button class="btn btn-sm btn-default" type="button" data-dismiss="modal" onclick="displayClasses()">Close</button>
+				                    </div>
+				                </div>
+				            </div>	                    
+	                    </div>
+	                    
+	                    
+	                    <!-- Add Student to Class -->
+	                    
+	                    <div id="add-students-to-class" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">	                    
+		                    <div class="modal-dialog modal-dialog-popin">
+				                <div class="modal-content">
+				                    <div class="block block-themed block-transparent remove-margin-b">
+				                        <div class="block-header bg-primary-dark">
+				                            <ul class="block-options">
+				                                <li>
+				                                    <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
+				                                </li>
+				                            </ul>
+				                            <h3 class="block-title">Add Students to Class</h3>
+				                        </div>
+				                        <div class="block-content">
+				                        	<div id="floating-search-bar" class="js-header-search header-search col-xs-6">
+						                      <div class="form-material form-material-primary input-group">
+						                          &nbsp;&nbsp;<input class="form-control" type="text" placeholder="Search Name.." ng-model="searchName" ng-change="searchUser()">
+						                          <span class="input-group-addon"><i class="si si-magnifier"></i></span>
+						                      </div>
+						                 	</div>
+				                        	<table class="table table-striped table-header-bg table-hover table-borderless" id="unAssignedTable">
+						                        <thead>
+						                            <tr>
+						                                <th class="text-center"><input type="checkbox" id="selectAllUnassigned" ng-click="selectAllUnassigned()"></input></th>
+						                                <th>Name</th>
+						                                <th class="text-center">Course</th>
+						                            </tr>
+						                        </thead>
+						                        <tbody>                        
+						                            <tr ng-repeat="student in unassignedList">
+						                            	<td class="text-center"><input class="student" type="checkbox" ng-checked="checkStudent(student.key)" value="{{student.key}}"/></td>
+						   								<td>{{student.firstName + " " + student.lastName}}</td>
+						  								<td class="text-center">{{student.course}}</td>
+						   							</tr>                                               
+						                        </tbody>
+						                    </table>
+						                    <br/>
+				                        </div>
+				                    </div>
+				                    <div class="modal-footer">
+				                    	<input class="btn btn-success" type="button" ng-click="assignStudents()" value="Add Students"/>
+				                        <button class="btn btn-sm btn-default" type="button" data-dismiss="modal" onclick="displayClasses()">Close</button>
+				                    </div>
+				                </div>
+				            </div>	                    
+	                    </div>
+	                    
+	                    
+	                    
+	                    
+	                    <div id="update-record-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">	                    
+		                    <div class="modal-dialog modal-dialog-popin">
+				                <div class="modal-content">
+				                <form ng-submit="submitUpdateRecordForm()">
+				                    <div class="block block-themed block-transparent remove-margin-b">
+				                        <div class="block-header bg-primary-dark">
+				                            <ul class="block-options">
+				                                <li>
+				                                    <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
+				                                </li>
+				                            </ul>
+				                            <h3 class="block-title">Update Record</h3>
+				                        </div>
+				                        <div class="block-content">				                        					                           
+	                    					<table class="table table-striped pull-left">	                    						
+                   								<tr><td class="hidden-xs boldText">Quiz 1</td><td><input required ng-model="q1" type="number" min="0" max="100"></td></tr>
+                   								<tr><td class="hidden-xs boldText">Quiz 2</td><td><input required  ng-model="q2" type="number" min="0" max="100"></td></tr>
+                   								<tr><td class="hidden-xs boldText">Quiz 3</td><td><input required ng-model="q3" type="number" min="0" max="100"></td></tr>
+                   								<tr><td class="hidden-xs boldText">Home Work 1</td><td><input required ng-model="hw1" type="number" min="0" max="100"></td></tr>
+                   								<tr><td class="hidden-xs boldText">Home Work 2</td><td><input required ng-model="hw2" type="number" min="0" max="100"></td></tr>
+                   								<tr><td class="hidden-xs boldText">Exam 1</td><td><input required ng-model="ex1" type="number" min="0" max="100"></td></tr>
+                   								<tr><td class="hidden-xs boldText">Exam 2</td><td><input required ng-model="ex2" type="number" min="0" max="100"></td></tr>                   								
+	                    					</table>											
+				                        </div>
+				                    </div>				                    
+				                    <div class="modal-footer">
+				                    	<input class="btn btn-sm btn-success" type="submit" value="Update Record"/>
+				                        <button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>				                       
+				                    </div>
+			                    </form>
+				                </div>
+				            </div>	                    
+	                    </div>
+                    </div>
+                    <!-- Table for Students -->
+                    <div class="col-xs-2 col-xs-4 col-xs-6 col-md-6 col-lg-6"></div>
+                        <div class="block-content">
+                        <div class="table-responsive">
+                            <table class="table table-header-bg table-striped" id="student-table">
+                                <thead>
+                                    <tr>
+                                    	<th class="text-center"><input type="checkbox" id="selectAll" ng-click="selectAll()"></input></th>
+                                        <th>Student Name</th>
+                                        <th class="hidden-xs text-center">Q1</th>
+              							<th class="hidden-xs text-center">Q2</th>
+              							<th class="hidden-xs text-center">Q3</th>
+              							<th class="hidden-xs text-center">HW1</th>
+              							<th class="hidden-xs text-center">HW2</th>
+              							<th class="hidden-xs text-center">E1</th>
+              							<th class="hidden-xs text-center">E2</th>                                        
+                                        <th class="text-center">Grade</th>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody> 
+                                	<tr ng-repeat="record in records">
+                                		<td class="text-center"><input class="record" type="checkbox" value="{{record.key}}"/></td>
+                                		<td>{{$index + 1}}. {{record.student.firstName + " " + record.student.lastName}}</td>
+                                		<td class="hidden-xs text-center">{{record.quizOne}}</td>
+                                		<td class="hidden-xs text-center">{{record.quizTwo}}</td>
+                                		<td class="hidden-xs text-center">{{record.quizThree}}</td>
+                                		<td class="hidden-xs text-center">{{record.assignmentOne}}</td>
+                                		<td class="hidden-xs text-center">{{record.assignmentTwo}}</td>
+                                		<td class="hidden-xs text-center">{{record.examOne}}</td>
+                                		<td class="hidden-xs text-center">{{record.examTwo}}</td>
+                                		<td class="hidden-xs text-center">{{record.grade}}</td>
+                                		<td class="hidden-xs text-center">
+                                			<p class="passed" ng-if="record.status=='PASSED'">PASSED</p>
+                                			<p class="failed" ng-if="record.status=='FAILED'">FAILED</p>
+                                		</td>
+                                		<td class="text-center">
+                                			<button class="btn btn-xs btn-default" title="Update Student Data" ng-click="getStudentRecord(record.key)" data-toggle="modal" data-target="#update-record-modal"><i class="fa fa-pencil"></i></button>
+			        						<button class="btn btn-xs btn-default" title="Remove Student" ng-click="removeRecord(record.key)"><i class="fa fa-times"></i></button>
+                                		</td>
+                                	</tr>
+                                	<tr>
+                                		<td colspan="11"></td>
+                                		<td class="text-center"><button class="btn btn-danger btn-sm" ng-click="removeStudents()">Remove</button></td>                                		
+                                	</tr>		
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <!-- End Main Content --> 

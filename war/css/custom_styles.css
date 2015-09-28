@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+
+div.error {
+	color: red;
+}
+
+input.error {
+    outline: none;
+    border-color: red;
+    box-shadow: 0 0 10px red;
+}
+
+div.successIndicator {
+	color:green;
+	font-size: 12pts;
+}

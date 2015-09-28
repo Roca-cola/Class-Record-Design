@@ -1,0 +1,114 @@
+
+
+					<h3 class="block-title">Manage Student Records</h3>
+                    <br/>
+                    <div id="floating-search-bar" class="js-header-search header-search col-xs-3">
+                      <div class="form-material form-material-primary input-group">
+                          &nbsp;&nbsp;<input class="form-control" type="text" placeholder="Search Name.." ng-model="searchName" ng-change="searchUser()">
+                          <span class="input-group-addon"><i class="si si-magnifier"></i></span>
+                      </div>
+                 	</div>
+                 	<br/>
+                    <!-- Table for Students -->
+                        <div class="block-content">
+                            <table id="resultTable" class="table table-striped table-header-bg table-hover table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th>Student Name</th>
+                                        <th class="text-center">Course</th>
+                                        <th class="text-center">Birthday</th>
+                                        <th class="text-center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                	<tr ng-repeat="student in students">
+                                		<td>{{student.firstName}}&nbsp;{{student.lastName}}</td>
+                                		<td class="text-center">{{student.course}}</td>
+                                		<td class="text-center">{{student.birthDate}}</td>
+                                		<td class="text-center">
+                                			<button ng-click="showUpdateModal(student.key)" class="btn btn-xs btn-default" title="Update Student">
+                                				<i class="fa fa-pencil"></i>
+                                			</button>
+                                			<button ng-click="deleteStudent(student.key)" class="btn btn-xs btn-default" title="Delete Student">
+                                				<i class="fa fa-times"></i>
+                                			</button>
+                                		</td>
+                                	</tr>
+                                </tbody>
+                            </table>
+                        </div>   
+                        
+                        <!-- Start Update student Profile Modal -->
+		                <div id="update-student-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">	                    
+		                    <div class="modal-dialog modal-dialog-popin">
+		                    <form class="js-validation-material form-horizontal push-10-t" ng-submit="updateStudent()">
+		                        <div class="modal-content">
+		                            <div class="block block-themed block-transparent remove-margin-b">
+		                                <div class="block-header bg-primary-dark">
+		                                    <ul class="block-options">
+		                                        <li>
+		                                            <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
+		                                        </li>
+		                                    </ul>
+		                                    <h3 class="block-title">Update Profile</h3>
+		                                </div>		                                
+		                                <div class="block-content">		                                    
+		                                        <div class="form-group">
+		                                            <div class="col-sm-9">
+		                                                <div class="form-material" id="update-user-message">                                                    
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="form-group">
+		                                            <div class="col-sm-12">
+		                                                <div class="form-material">
+		                                                    <input class="form-control" id="firstName" ng-model="firstName" type="text" required>
+		                                                    <label for="username-modal">First Name</label>
+		                                                </div>
+		                                            </div>
+		                                        </div>                                        
+		                                        <div class="form-group">
+		                                            <div class="col-sm-12">
+		                                                <div class="form-material">
+		                                                    <input required class="form-control" id="lastName" type="text" required ng-model="lastName" minlength="2" maxlength="45">
+		                                                    <label for="name-modal">Last Name</label>
+		                                                </div>
+		                                            </div>
+		                                        </div>  
+		                                        <div class="form-group">
+		                                            <div class="col-sm-12">
+		                                                <div class="form-material">
+		                                                    <select class="form-control" id="register4-course" ng-model="courseSelected" required>
+						                                    	<option disabled>Please select a course</option>
+						                                    	<option required ng-repeat="course in courses" value="{{course.name}}">{{course.name}}</option>
+						                                    </select>
+		                                                </div>
+		                                            </div>
+		                                        </div>    
+		                                        <div class="form-group">
+		                                            <div class="col-sm-12">
+		                                                <div class="form-material">
+		                                                   	<input required class="js-datepicker form-control" type="text" id="example-datepicker4" ng-model="birthDate" name="example-datepicker4" data-date-format="yyyy/mm/dd" placeholder="yyyy/mm/dd">
+															<label for="example-datepicker4">Choose a date</label>  
+		                                                </div>
+		                                            </div>
+		                                        </div>		                                                                              
+		                                    
+		                                </div>
+		                            </div>
+		                            <div class="modal-footer">
+		                            	<button class="btn btn-sm btn-success" type="submit">Update Student</button>
+		                                <button class="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
+		                            </div>
+	                            </form>                            
+		                        </div>
+		                    </div>
+		                </div>                
+		                <!-- End Update User Profile Modal -->
+		                
+        <script>
+            $(function () {
+                // Init page helpers (BS Datepicker + BS Colorpicker + Select2 + Masked Input + Tags Inputs plugins)
+                App.initHelpers(['datepicker', 'colorpicker', 'select2', 'masked-inputs', 'tags-inputs']);
+            });
+        </script> 
