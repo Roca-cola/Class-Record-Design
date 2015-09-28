@@ -12,7 +12,13 @@ import org.slim3.repackaged.org.json.JSONObject;
 import classrecord.constants.Constants;
 import classrecord.dto.CourseDTO;
 import classrecord.service.CourseService;
-
+/**
+ * Controller that handles the courses
+ * @author Albert Dale Palacio
+ * @version 0.01
+ * Version History 
+ * 0.01 - Albert Dale Palacio - initial codes
+ */
 public class CourseController extends Controller {
 
     @Override

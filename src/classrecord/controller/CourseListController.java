@@ -9,11 +9,12 @@ import com.google.appengine.labs.repackaged.org.json.JSONObject;
 import classrecord.service.CourseService;
 
 /**
- * Controller used to get all the courses
- * @author
- * @version
+ * Controller that lists the courses
+ * @author Bryan Agustine Cabansay
+ * @version 0.01
+ * Version History 
+ * 0.01 - Bryan Agustine Cabansay - initial codes
  */
-
 public class CourseListController extends Controller {
     
     @Override

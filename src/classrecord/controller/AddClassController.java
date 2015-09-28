@@ -9,8 +9,11 @@ import classrecord.service.ClassService;
 
 /**
  * Controller used to add a class
- * @author
- * @version
+ * @author Bryan Agustine Cabansay
+ * @version 0.02
+ * Version History 
+ * 0.01 - Bryan Agustine Cabansay - initial codes
+ * 0.02 - Bryan Agustine Cabansay - final edit
  */
 public class AddClassController extends Controller {
 

@@ -13,6 +13,13 @@ import classrecord.constants.Constants;
 import classrecord.dto.ClassDTO;
 import classrecord.service.ClassService;
 
+/**
+ * Controller that handles the classes
+ * @author Sheila Mae Batistil
+ * @version 0.01
+ * Version History 
+ * 0.01 - Sheila Mae Batistil - initial codes
+ */
 public class ClassController extends Controller {
 
     @Override

@@ -18,8 +18,11 @@ import classrecord.service.RecordService;
 
 /**
  * Controller used to delete a class
- * @author
- * @version
+ * @author Bryan Agustine Cabansay & J-Dar Siegfred Rodriguez
+ * @version 0.02
+ * Version History 
+ * 0.01 - Bryan Agustine Cabansay - initial codes
+ * 0.02 - J-Dar Siegfred Rodriguez - fix & final commit
  */
 public class DeleteClassController extends Controller {
 

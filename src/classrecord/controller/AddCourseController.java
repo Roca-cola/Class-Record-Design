@@ -6,7 +6,13 @@ import org.slim3.repackaged.org.json.JSONObject;
 
 import classrecord.dto.CourseDTO;
 import classrecord.service.CourseService;
-
+/**
+ * Controller used to add a course
+ * @author Albert Dale Palacio
+ * @version 0.01
+ * Version History 
+ * 0.01 - Albert Dale Palacio - initial codes
+ */
 public class AddCourseController extends Controller {
 
     @Override

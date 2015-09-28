@@ -16,8 +16,10 @@ import classrecord.service.StudentService;
 
 /**
  * Controller used to delete student record
- * @author 
- * @version
+ * @author Miqueas Cagot
+ * @version 0.01
+ * Version History 
+ * 0.01 - Miqueas Cagot - initial codes
  */
 public class DeleteStudentController extends Controller {
 

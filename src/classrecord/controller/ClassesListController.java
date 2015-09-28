@@ -10,7 +10,9 @@ import com.google.appengine.labs.repackaged.org.json.JSONObject;
 /**
  * Controller used to get all the classes
  * @author
- * @version
+ * @version 0.01
+ * Version History 
+ * 0.01 - Julie Jane Alegre - initial codes
  */
 public class ClassesListController extends Controller {
 

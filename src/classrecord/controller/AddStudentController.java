@@ -15,8 +15,12 @@ import com.google.appengine.labs.repackaged.org.json.JSONObject;
 
 /**
  * Controller used to add a student
- * @author 
- * @version
+ * @author J-Dar Siegfred Rodriguez
+ * @version 0.03
+ * Version History 
+ * 0.01 - J-Dar Siegfred Rodriguez - initial codes
+ * 0.02 - J-Dar Siegfred Rodriguez - fixed bugs course not displaying
+ * 0.03 - J-Dar Siegfred Rodriguez - final commit
  */
 
 public class AddStudentController extends Controller {

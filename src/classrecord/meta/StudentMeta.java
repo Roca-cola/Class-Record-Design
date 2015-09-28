@@ -1,6 +1,6 @@
 package classrecord.meta;
 
-//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2015-09-26 21:56:33")
+//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2015-09-28 09:07:54")
 /** */
 public final class StudentMeta extends org.slim3.datastore.ModelMeta<classrecord.model.Student> {
 
